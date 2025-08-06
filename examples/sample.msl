@@ -1,0 +1,10 @@
+open "https://httpbin.org/html"
+
+click "a"
+  set user = text
+
+media
+  image
+    where src ~ "httpbin.org"
+    extensions jpg, png
+  save to "./media/{user}" 

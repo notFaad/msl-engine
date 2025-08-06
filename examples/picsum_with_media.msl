@@ -1,0 +1,8 @@
+open "https://picsum.photos/800/600"
+
+media
+  image
+    where src ~ "picsum.photos"
+    extensions jpg
+
+save to "./picsum_images/800x600" 

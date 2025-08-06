@@ -1,0 +1,45 @@
+# Rust build artifacts
+/target
+Cargo.lock
+
+# Documentation and generated content
+/docs
+/docs/*.html
+/docs/assets/
+/docs/_site/
+
+# Downloaded media and images
+/downloaded_media/
+/picsum_images/
+/wikipedia_images/
+/kick_images/
+/unsplash_images/
+/landscape_photos/
+/*_images/
+/*_photos/
+
+# Generated documentation
+MEDIA_DOWNLOAD_STATUS.md
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp

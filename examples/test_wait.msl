@@ -1,0 +1,9 @@
+open "https://kick.com/browse/categories"
+
+wait 5
+
+media
+  image
+    extensions jpg, jpeg, png, webp
+
+save to "./kick_images/with_wait" 

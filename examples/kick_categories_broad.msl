@@ -1,0 +1,7 @@
+open "https://kick.com/browse/categories"
+
+media
+  image
+    extensions jpg, jpeg, png, webp, svg
+
+save to "./kick_images/all_images" 

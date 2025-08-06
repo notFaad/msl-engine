@@ -1,0 +1,8 @@
+open "https://unsplash.com/s/photos/nature"
+
+media
+  image
+    where src ~ "images.unsplash.com"
+    extensions jpg, jpeg, png
+
+save to "./unsplash_images/nature" 

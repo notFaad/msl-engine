@@ -1,0 +1,45 @@
+[package]
+name = "msl-engine"
+version = "0.1.0"
+edition = "2021"
+authors = ["MSL Engine Team"]
+description = "A Rust-based web scraping engine with custom DSL support"
+
+[dependencies]
+# Web scraping and HTTP
+reqwest = { version = "0.11", features = ["json", "stream"] }
+scraper = "0.18"
+url = "2.4"
+
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+
+# Parsing and AST
+nom = "7.1"
+regex = "1.9"
+
+# File system and downloads
+tokio-util = { version = "0.7", features = ["io"] }
+futures-util = "0.3"
+bytes = "1.4"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# CLI
+clap = { version = "4.0", features = ["derive"] }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Optional: Headless browser support
+# fantoccini = "0.19"  # Uncomment for JS support
+
+[dev-dependencies]
+tempfile = "3.8"

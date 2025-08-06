@@ -1,0 +1,3 @@
+open "https://example.com"
+click "a"
+  set user = text 

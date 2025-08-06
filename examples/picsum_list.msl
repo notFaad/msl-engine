@@ -1,0 +1,8 @@
+open "https://picsum.photos/v2/list"
+
+media
+  image
+    where src ~ "picsum.photos"
+    extensions jpg
+
+save to "./picsum_images/list" 

@@ -1,0 +1,38 @@
+open "https://picsum.photos/v2/list"
+
+click "a"
+  set image_id = attr("href").split("/")[-1]
+  set author = text
+
+  media
+    image
+      where src ~ "picsum.photos"
+      extensions jpg, webp
+    save to "./picsum_images/{image_id}_{author}"
+
+# Scrape specific image sizes
+open "https://picsum.photos/800/600"
+
+media
+  image
+    where src ~ "picsum.photos"
+    extensions jpg
+  save to "./picsum_images/800x600"
+
+# Scrape grayscale images
+open "https://picsum.photos/400/300?grayscale"
+
+media
+  image
+    where src ~ "picsum.photos"
+    extensions jpg
+  save to "./picsum_images/grayscale"
+
+# Scrape blurred images
+open "https://picsum.photos/500/500?blur=2"
+
+media
+  image
+    where src ~ "picsum.photos"
+    extensions jpg
+  save to "./picsum_images/blurred" 

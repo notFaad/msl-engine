@@ -1,0 +1,10 @@
+open "https://kick.com/browse/categories"
+
+media
+  image
+    where src ~ "kick.com"
+    extensions jpg, jpeg, png, webp
+    where src ~ "thumb"
+    where src ~ "category"
+
+save to "./kick_images/categories_thumbnails" 

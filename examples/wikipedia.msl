@@ -1,0 +1,8 @@
+open "https://en.wikipedia.org/wiki/Nature"
+
+media
+  image
+    where src ~ "upload.wikimedia.org"
+    extensions jpg, jpeg, png
+
+save to "./wikipedia_images/nature" 

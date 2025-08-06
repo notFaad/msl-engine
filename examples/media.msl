@@ -1,0 +1,5 @@
+open "https://example.com"
+media
+  image
+    where src ~ "example.com"
+    extensions jpg, png 

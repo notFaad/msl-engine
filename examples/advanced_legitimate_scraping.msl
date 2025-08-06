@@ -1,0 +1,33 @@
+# Advanced Legitimate Scraping Example
+# This demonstrates sophisticated scraping techniques for legal content
+
+open "https://unsplash.com/s/photos/landscape"
+
+# Wait for initial page load
+wait 3
+
+# First pass - get high-quality images
+media
+  image
+    where src ~ "images.unsplash.com"
+    extensions jpg, jpeg, png
+    where src ~ "w="
+
+# Wait for lazy loading
+wait 2
+
+# Second pass - get all images
+media
+  image
+    where src ~ "images.unsplash.com"
+    extensions jpg, jpeg, png
+
+# Wait for any dynamic content
+wait 3
+
+# Third pass - get any remaining images
+media
+  image
+    extensions jpg, jpeg, png, webp
+
+save to "./landscape_photos/unsplash" 

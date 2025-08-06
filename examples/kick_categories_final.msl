@@ -1,0 +1,23 @@
+open "https://kick.com/browse/categories"
+
+wait 5
+
+media
+  image
+    extensions jpg, jpeg, png, webp, svg
+
+wait 3
+
+media
+  image
+    where src ~ "kick.com"
+    extensions jpg, jpeg, png, webp
+
+wait 2
+
+media
+  image
+    where src ~ "cdn"
+    extensions jpg, jpeg, png, webp
+
+save to "./kick_images/final_attempt" 

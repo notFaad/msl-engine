@@ -1,0 +1,8 @@
+open "https://kick.com/browse/categories"
+
+media
+  image
+    where src ~ "cdn"
+    extensions jpg, jpeg, png, webp
+
+save to "./kick_images/cdn_images" 

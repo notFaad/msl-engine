@@ -1,0 +1,5 @@
+open "https://picsum.photos/800/600"
+
+media
+  image
+    where src ~ "picsum.photos" 

@@ -1,0 +1,53 @@
+# Scrape random images of different sizes
+open "https://picsum.photos/400/300"
+
+media
+  image
+    where src ~ "picsum.photos"
+    extensions jpg
+  save to "./picsum_images/random_400x300"
+
+# Scrape square images
+open "https://picsum.photos/500"
+
+media
+  image
+    where src ~ "picsum.photos"
+    extensions jpg
+  save to "./picsum_images/square_500"
+
+# Scrape specific image by ID
+open "https://picsum.photos/id/237/600/400"
+
+media
+  image
+    where src ~ "picsum.photos"
+    extensions jpg
+  save to "./picsum_images/specific_237"
+
+# Scrape grayscale images
+open "https://picsum.photos/300/200?grayscale"
+
+media
+  image
+    where src ~ "picsum.photos"
+    extensions jpg
+  save to "./picsum_images/grayscale_300x200"
+
+# Scrape blurred images
+open "https://picsum.photos/400/400?blur=3"
+
+media
+  image
+    where src ~ "picsum.photos"
+    extensions jpg
+  save to "./picsum_images/blurred_400x400"
+
+# Scrape WebP format
+open "https://picsum.photos/600/300.webp"
+
+media
+  image
+    where src ~ "picsum.photos"
+    extensions webp
+  save to "./picsum_images/webp_600x300" 
